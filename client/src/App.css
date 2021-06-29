@@ -1,0 +1,55 @@
+.root {
+    display: flex;
+    flex-Wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    border: 1px solid grey;
+  }
+  .gridList{
+    width: 1200px;
+    height: 450px;
+  }
+  .gridList1 {
+    width: 1200px;
+    border:1px solid grey;
+     height: 45px;
+  }
+  h1{
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: left;   
+  }
+  .paper{
+    text-Align: center;
+    border: 1px solid grey;
+  }
+  .gridList2{
+    padding: 40px;
+    margin:20px;
+    border-Radius:16px;
+  }
+  .gridList::-webkit-scrollbar {
+    width: 8px;
+    height: 40px;
+  }
+
+  .gridList::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ab987a;
+  }
+  .gridd{
+    border: 1px solid grey;
+    border-radius: 12px;
+    margin: 20px;
+    width: 250px;
+  }
+  .bouzzit{
+    border-left: 2px solid grey;
+
+  }
+  .hello{
+    border: 1px solid grey;
+  }
+  .hi{
+    border-radius:120px;
+  }

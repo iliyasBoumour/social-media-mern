@@ -1,0 +1,168 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.login-col {
+  background: #0f1626;
+  padding: 4.6rem 2.8rem;
+  color: #fff;
+}
+
+/* form login */
+/* Bounce to the left or right side*/
+@keyframes bounceLeft {
+  0% {
+    transform: translate3d(100%, -50%, 0);
+  }
+  50% {
+    transform: translate3d(-30px, -50%, 0);
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes bounceRight {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+  50% {
+    transform: translate3d(calc(100% + 30px), -50%, 0);
+  }
+  100% {
+    transform: translate3d(100%, -50%, 0);
+  }
+}
+@keyframes showSignUp {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes showLogin {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* form login style */
+.form-login {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  min-height: 24em;
+  width: calc(50% - 30px);
+  display: grid !important;
+  place-items: center;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transform: translate3d(100%, -50%, 0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.form-login input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #0f1626;
+}
+.form-login input:focus {
+  -webkit-box-shadow: none;
+  border-bottom: 1px solid #ab987a;
+  box-shadow: none;
+}
+/* bounce right and left animations */
+.form-login.bounceLeft {
+  -webkit-animation: bounceLeft 1s forwards;
+  animation: bounceLeft 1s forwards;
+}
+.form-login.bounceRight {
+  -webkit-animation: bounceRight 1s forwards;
+  animation: bounceRight 1s forwards;
+}
+.form-login.bounceRight .col {
+  -webkit-animation: showSignUp 1s forwards;
+  animation: showSignUp 1s forwards;
+}
+.form-login.bounceRight .col {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(-120px, 0, 0);
+}
+.form-login.bounceLeft .col {
+  -webkit-animation: showLogin 1s forwards;
+  animation: showLogin 1s forwards;
+}
+.form-login.bounceLeft .col {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(120px, 0, 0);
+}
+
+/* btn */
+.btn-outline-primary {
+  text-transform: uppercase;
+  color: #ab987a;
+  border-color: #ab987a;
+  padding: 0.7em 2em;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  color: #fff;
+  border-color: #fff;
+  background: #ab987a;
+  box-shadow: none !important;
+}
+
+/* form login */
+@media (max-width: 767.98px) {
+  /* top */
+  @keyframes bounceLeft {
+    0% {
+      transform: translate3d(0, 0%, 0);
+    }
+    50% {
+      transform: translate3d(0, calc(-104% - 30px), 0);
+    }
+
+    100% {
+      transform: translate3d(0, -104%, 0);
+    }
+  }
+  /* down */
+  @keyframes bounceRight {
+    0% {
+      transform: translate3d(0, -100%, 0);
+    }
+    50% {
+      transform: translate3d(0%, calc(10% + 30px), 0);
+    }
+    100% {
+      transform: translate3d(0%, 10%, 0);
+    }
+  }
+  .form-login.bounceLeft .col {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 104px, 0);
+  }
+  .form-login.bounceRight .col {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100px, 0);
+  }
+
+  .form-login {
+    bottom: 0;
+    left: 30px;
+    min-width: calc(100% - 60px);
+    max-width: calc(100% - 60px);
+    margin: auto;
+    min-height: 35vh;
+    transform: translate3d(0%, 0%, 0);
+  }
+}
